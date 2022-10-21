@@ -1,20 +1,28 @@
 var input=document.querySelector('#input');
-var btnOne=document.querySelector('#h1');
-var btnTwo=document.querySelector('#h2');
-var btnThree=document.querySelector('#h3');
+var h1=document.querySelector('#h1');
+var h2=document.querySelector('#h2');
+var h3=document.querySelector('#h3');
 var output=document.querySelector('#output');
-
-input.addEventListener("keyup",()=>
+ 
+function firstFont()
 {
-    output.innerHTML=input.value;
-})
-h1.addEventListener("click",()=>{
-output.innerHTML=`<h1>${input.value}</h1>`;
-})
-h2.addEventListener("click",()=>{
-    output.innerHTML=`<h2>${input.value}</h2>`;
-    })
-    h3.addEventListener("click",()=>{
-        output.innerHTML=`<h3>${input.value}</h3>`;
-        })
+    output.innerHTML=`<h1>${input.value}</h1>`;
+}
+function fontSecond()
+{
+   output.innerHTML=`<h2>${input.value}</h2>`;
+}
+function fontThird()
+{
+ output.innerHTML=`<h3>${input.value}</h2>`;
+}
+
+function showOp()
+{
+    output.innerText=input.value;
+}
+h1.addEventListener("click",firstFont);
+h2.addEventListener("click",fontSecond);
+h3.addEventListener("click",fontThird);
+input.addEventListener("keyup",showOp);
         
